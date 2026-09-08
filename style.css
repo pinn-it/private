@@ -1,0 +1,372 @@
+/* ============================================================
+   Alfiyan.id — stylesheet
+   Broadsheet-inspired profile page. Palette: putih, navy, brick.
+   ============================================================ */
+
+:root {
+  --bg: #ffffff;
+  --ink: #1a1a1a;
+  --ink-muted: #5b5b5b;
+  --ink-faint: #8a8a8a;
+  --rule: #dedede;
+  --rule-strong: #1a1a1a;
+  --navy: #1b3a5c;
+  --navy-hover: #10263e;
+  --brick: #9a3324;
+
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --measure: 680px;
+  --wide: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--navy);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--navy-hover);
+}
+
+.container {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 100;
+  font-family: var(--sans);
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
+/* ---------- Masthead ---------- */
+.masthead {
+  border-bottom: 3px solid var(--rule-strong);
+}
+
+.masthead__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 0 14px;
+  font-family: var(--sans);
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wordmark span {
+  color: var(--brick);
+}
+
+.masthead__meta {
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+.masthead nav {
+  border-top: 1px solid var(--rule);
+  padding: 10px 0;
+}
+
+.masthead nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 22px;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.masthead nav a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.masthead nav a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* ---------- Article ---------- */
+.article {
+  padding: 44px 0 64px;
+}
+
+.article__head {
+  max-width: var(--measure);
+  margin: 0 auto 32px;
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brick);
+  margin: 0 0 10px;
+}
+
+.headline {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  line-height: 1.14;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.dek {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  margin: 0 0 18px;
+}
+
+.byline {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 0;
+}
+
+.byline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Hero photo ---------- */
+.hero {
+  max-width: var(--wide);
+  margin: 0 auto 40px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+.hero figcaption {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  padding-top: 8px;
+  max-width: var(--measure);
+}
+
+/* ---------- Body copy ---------- */
+.article__body {
+  max-width: var(--measure);
+  margin: 0 auto;
+  font-size: 1.13rem;
+  line-height: 1.75;
+}
+
+.article__body p {
+  margin: 0 0 22px;
+}
+
+.article__body h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.55rem;
+  margin: 44px 0 18px;
+  padding-top: 4px;
+  border-top: 1px solid var(--rule);
+}
+
+/* ---------- Fact box ---------- */
+.factbox {
+  font-family: var(--sans);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--navy);
+  padding: 22px 24px;
+  margin: 8px 0 36px;
+  background: #fafafa;
+}
+
+.factbox h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  margin: 0 0 14px;
+}
+
+.factbox dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 18px;
+  font-size: 0.94rem;
+}
+
+.factbox dt {
+  color: var(--ink-faint);
+}
+
+.factbox dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+/* ---------- Skills list ---------- */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.skills li {
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+}
+
+.skills h3 {
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.skills p {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  color: var(--ink-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- Contact / social ---------- */
+.contact {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  padding: 10px 18px;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+.ig-link:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 3px solid var(--rule-strong);
+  padding: 28px 0 40px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  justify-content: space-between;
+}
+
+.site-footer a {
+  color: var(--ink-faint);
+}
+
+/* ---------- Focus states ---------- */
+a:focus-visible,
+.ig-link:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .masthead__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .masthead nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .factbox dl {
+    grid-template-columns: 1fr;
+    gap: 2px 0;
+  }
+
+  .factbox dd {
+    margin-bottom: 8px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
